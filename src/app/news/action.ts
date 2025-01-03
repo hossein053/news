@@ -30,10 +30,10 @@ export async function getNews () {
       },
       cache: 'no-cache'
     })
-    console.log(result)
     if (result.error) {
       throw new Error(result.error)
     }
+    console.log(result)
 
     return { success: true, data: result }
   } catch (error) {}
