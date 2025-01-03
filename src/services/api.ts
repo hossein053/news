@@ -2,7 +2,7 @@ export async function API (url: string, options: RequestInit = {}) {
   try {
     const headers = {}
 
-    const response = await fetch(`http://localhost:3000/api/routes${url}`, {
+    const response = await fetch(`https://news-indol-omega.vercel.app/api/routes${url}`, {
       ...options,
       headers: headers
     })
