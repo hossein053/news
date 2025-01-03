@@ -23,12 +23,14 @@ export async function createNews (formData: FormData) {
 
 export async function getNews () {
   try {
+    
     const result = await API('/news', {
       next: {
         tags: ['posts']
       },
       cache: 'no-cache'
     })
+    console.log(result)
     if (result.error) {
       throw new Error(result.error)
     }
